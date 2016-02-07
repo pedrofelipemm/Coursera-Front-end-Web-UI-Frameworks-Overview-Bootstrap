@@ -58,6 +58,19 @@
                      </li>
                     <li><a href="contactus.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
                 </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Email" aria-label="email">
+                        <input type="text" class="form-control" placeholder="Password" aria-label="password">
+                        <div class="checkbox">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="remember" value="">
+                                <span style="color: white;">Remember me</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-info">Sign in</button>
+                    </div>
+                </form>
             </div>
         </div>
     </nav>
@@ -74,10 +87,14 @@
                     <p style="padding:20px;"></p>
                     <img src="img/logo.png" class="img-responsive">
                 </div>
+                <div class="col-xs-12 col-sm-2">
+                    <p style="padding:40px;"></p>
+                    <a class="btn btn-warning" href="#reserveform"><strong>Reserve Table</strong></a>
+                </div>
             </div>
         </div>
     </header>
-
+       
     <div class="container">
 
         <div class="row row-content">
@@ -115,9 +132,23 @@
                 <h3 align=center>This Month's Promotions</h3>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
-                <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+                <div class="media">
+                    <div class="media-body">
+                        <div class="media-heading">
+                            <h2>
+                                Weekend Grand Buffet 
+                                <span class="label label-danger">New</span>
+                            </h2>        
+                            <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                            <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+                        </div>
+                    </div>
+                    <div class="media-right media-middle">
+                        <a href="#">
+                            <img class="media-object img-thumbnail" src="img/buffet.png" alt="buffet">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -145,6 +176,71 @@
                         <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
                     </div>
                 </div>
+            </div>
+        </div>
+        
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-3">
+                <p style="padding:20px;"></p>
+                <h2><strong>Reserve a Table</strong></h2> 
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <form id="reserveform" class="form-horizontal" role="form">
+                    <div class="form-group form-group-lg">
+                        <label for="guests" class="col-sm-offset-1 col-sm-2 control-label"><strong>Number of Guests</strong></label>
+                        <div class="radio col-sm-7">
+                            <label class="radio-inline">
+                                <input type="radio" name="guests" value="1">
+                                <strong>1</strong>
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="guests" value="2">
+                                <strong>2</strong>
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="guests" value="3">
+                                <strong>3</strong>
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="guests" value="4">
+                                <strong>4</strong>
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="guests" value="5">
+                                <strong>5</strong>
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="guests" value="6">
+                                <strong>6</strong>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-lg has-feedback">
+                        <label for="date" class="col-sm-3 control-label"><strong>Date and Time</strong></label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="date" name="date" placeholder="Date">
+                            <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="time" name="time" placeholder="Time">
+                            <span class="glyphicon glyphicon-time form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-lg">
+                        <div class="col-sm-offset-3 col-sm-3">
+                            <button type="submit" class="btn btn-primary">Reserve</button>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-lg">
+                        <div class="col-sm-12">
+                            <div class="alert alert-warning alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <strong>Warning::</strong> Please <strong><a href="+852 1234 5678">call</a></strong> us to reserve for more than six guests.
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
