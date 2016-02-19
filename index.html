@@ -137,10 +137,10 @@
                             <label for="section" class="col-sm-2 control-label"><strong>Section</strong></label>
                             <div class="radio col-sm-10 btn-group" data-toggle="buttons">
                                 <label class="btn btn-success active">
-                                    <input name="section" type="radio" autocomplete="off" checked> Non-Smocking
+                                    <input name="section" type="radio" autocomplete="off" checked> Non-Smoking
                                 </label>
                                 <label class="btn btn-danger">
-                                    <input name="section" type="radio" autocomplete="off" checked> Smocking
+                                    <input name="section" type="radio" autocomplete="off" checked> Smoking
                                 </label>
                             </div>                                
                         </div>
@@ -253,6 +253,15 @@
                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                    
+                   <div class="btn-group" id="carouselButtons">
+                        <button class="btn btn-danger btn-xs" id="carousel-pause">
+                	       <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+                        </button>
+                        <button class="btn btn-danger btn-xs" id="carousel-play">
+                	       <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                        </button>
+                   </div>
                    
                 </div>
             </div>
@@ -386,11 +395,17 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    
+
     <script>
         $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-         });
+            $("#mycarousel").carousel( { interval: 2000 } );
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
+        });
     </script>
     
 </body>
