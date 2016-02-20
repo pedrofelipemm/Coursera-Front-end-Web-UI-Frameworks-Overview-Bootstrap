@@ -59,8 +59,8 @@
                     <li><a href="contactus.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a data-toggle="modal" data-target="#loginModal">
-                    <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    <li>
+                        <a onclick="fusion.modal(loginModal)"><span class="glyphicon glyphicon-log-in"></span> Login</a>
                     </li>
                 </ul>
             </div>
@@ -191,7 +191,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                     <p style="padding:40px;"></p>
-                    <a type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#reserveModal"><strong>Reserve Table</strong></a>
+                    <a type="button" class="btn btn-warning btn-block" onclick="fusion.modal(reserveModal)" ><strong>Reserve Table</strong></a>
                 </div>
             </div>
         </div>
@@ -397,14 +397,22 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
+            var fusion = window.fusion = {};
+            
             $("#mycarousel").carousel( { interval: 2000 } );
+            
             $("#carousel-pause").click(function(){
                 $("#mycarousel").carousel('pause');
             });
+            
             $("#carousel-play").click(function(){
                 $("#mycarousel").carousel('cycle');
             });
+            
+            fusion.modal = function(elem) {
+                $(elem).modal('toggle');
+            };
         });
     </script>
     
